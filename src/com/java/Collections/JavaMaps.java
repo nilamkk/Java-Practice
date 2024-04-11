@@ -25,7 +25,17 @@ public class JavaMaps {
 		
 		
 		//////////////////////// TreeMap ///////////////////////////////////////////
-		TreeMap<Integer, String> treeMap = new TreeMap<Integer, String>();
+		TreeMap<Integer, String> treeMap = new TreeMap<Integer, String>( 
+												new Comparator<Integer>(){
+													public int compare(Integer a, Integer b) {
+														if(a > b)
+															return -1;
+														if(a < b)
+															return 1;
+														return 0;
+													}
+												}
+											);
 		
 		treeMap.put(2, "The Lost Symbol");
 		treeMap.put(1, "IKIGAI");
