@@ -11,6 +11,11 @@ class Logger {
 		}
 	}
 	
+	// Regarding Copy constructor:
+	// In CPP by default the copy constructor is public, so while implementing singleton we need to make sure that copy constructor 
+	// is made explicitly private.
+	// But in java the default copy constructor is not there, so chilllll!
+	
 	public static Logger getLogger() {
 		if( logger == null ) {
 			synchronized(Logger.class) {
