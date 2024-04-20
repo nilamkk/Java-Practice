@@ -45,8 +45,16 @@ public class SetProgram {
 			System.out.println(entry);
 		}
 		
-		System.out.println("The floor entry of key 4 is "+ treeSet.floor(4) );
+		System.out.println("The floor entry of key 4 is "+ treeSet.floor(4) );	
 		System.out.println("The ceil entry of key 4 is "+ treeSet.ceiling(4) );
+		System.out.println("The lower entry of key 4 is "+ treeSet.lower(4) );
+		System.out.println("The higher entry of key 4 is "+ treeSet.higher(4) );
+	
+		System.out.println("The floor entry of key 2 is "+ treeSet.floor(2) );	 // floor is less than or equal
+		System.out.println("The ceil entry of key 2 is "+ treeSet.ceiling(2) ); // ceiling is greater than or equal
+		System.out.println("The lower entry of key 2 is "+ treeSet.lower(2) ); // lower is strictly less than
+		System.out.println("The higher entry of key 2 is "+ treeSet.higher(2) ); // higher is strictly greater than
+		
 	}
 
 }

@@ -21,6 +21,9 @@ public class JavaMaps {
 		
 		System.out.println("Is the map empty? -- "+ hashMap.isEmpty() );
 		hashMap.put(2, "Atomic Habits");
+		
+		// hashMap.clear(); // This is also there
+		
 		System.out.println("The size of the map is "+ hashMap.size());
 		
 		
@@ -47,8 +50,6 @@ public class JavaMaps {
 		
 		System.out.println("The floor entry of key 4 is "+ treeMap.floorEntry(4) );
 		System.out.println("The ceil entry of key 4 is "+ treeMap.ceilingEntry(4) );
-		
-		
 		
 	}
 

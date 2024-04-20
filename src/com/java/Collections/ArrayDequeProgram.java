@@ -18,7 +18,7 @@ public class ArrayDequeProgram {
 		dq.offerFirst(5);
 		dq.offerLast(6);		
 		
-		dq.push(7);
+		dq.push(7); // Pushes the element at the beginning of the dequeue
 		
 		// Forward iteration
 		System.out.println("Forward iteration");
@@ -49,9 +49,9 @@ public class ArrayDequeProgram {
 		
 		dq.poll();
 		dq.pollFirst();
-		dq.pollLast();		
-		
-		dq.pop();
+		dq.pollLast();	
+
+		dq.pop(); // removes the first element in the Dequeue
 		
 		System.out.println("Is the deque empty? -- "+ dq.isEmpty());
 		

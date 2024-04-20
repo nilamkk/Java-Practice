@@ -21,6 +21,12 @@ public class StackProgram {
 		
 		System.out.println("Is the top empty? -- "+ st.empty());
 		
+		// System.out.println("Is the top empty? -- "+ st.isEmpty()); // this works as well.
+		
+		// st.clear(); // clears the stack
+		
+		System.out.println("The size of the stack is: "+ st.size());
+		
 		System.out.println("Element 6 is at the position(from the top considering first element's pos as 1): " + st.search(6) );
 		
 		System.out.println("Now iterating through the elements of the stack:");
