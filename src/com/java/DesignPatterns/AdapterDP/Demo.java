@@ -4,9 +4,9 @@ import java.util.*;
 
 // PPS Client Purchase Requisition Data
 class PurchaseReqnPPSData{
-	int purchaseReqn;
-	String supplier;
-	String purchasingOrg;
+	private int purchaseReqn;
+	private String supplier;
+	private String purchasingOrg;
 	
 	public PurchaseReqnPPSData(int purchaseReqn, String supplier, String purchasingOrg) {
 		this.purchaseReqn = purchaseReqn;
@@ -47,9 +47,9 @@ interface PurchaseReqnPPSDataProcessing{
 
 // Standard PR data/ Legacy data
 class PurchaseReqnStandardData{
-	int banfn;
-	String lifnr;
-	String ekorg;
+	private int banfn;
+	private String lifnr;
+	private String ekorg;
 	
 	public PurchaseReqnStandardData(int banfn, String lifnr, String ekorg) {
 		this.banfn = banfn;
@@ -142,7 +142,7 @@ class PurchaseReqnStandardAdapter implements PurchaseReqnPPSDataProcessing{
 	}
 	
 	private PurchaseReqnStandardData convertPPStoStandard(PurchaseReqnPPSData prData) {
-		return new PurchaseReqnStandardData(prData.purchaseReqn, prData.supplier, prData.purchasingOrg);
+		return new PurchaseReqnStandardData(prData.getPurchaseReqn(), prData.getSupplier(), prData.getPurchasingOrg());
 	}
 	
 	private List<String> mapMessage(List<String> standardMsgs){
