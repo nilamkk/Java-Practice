@@ -16,6 +16,13 @@ class TrainerAccess extends AccessModifiers{
 		// defaultNumber = 4; // Default members are not inherited inside different package
 		// privateNumber = 2; // Private members are not inherited inside different package
 	}
+	
+	public void getAttributes() {
+		System.out.println("Public number is " + publicNumber);
+		System.out.println("Protected number is " + protectedNumber);
+		System.out.println("Default number is not inherited. Hence not available!" );
+		System.out.println("Private number is not inherited. Hence not available!");
+	}
 }
 
 public class Trainer {
@@ -34,6 +41,13 @@ public class Trainer {
 		// accessModifiers.pikachu.Attack();
 		
 		
+		// For TrainerAccess class
+		TrainerAccess trainerAccess = new TrainerAccess();
+		trainerAccess.getAttributes();
+		System.out.println(trainerAccess.publicNumber);
+		// System.out.println(trainerAccess.protectedNumber); // Although it is inherited, it is not accessible inside Trainer class since it is in another package
+		// System.out.println(trainerAccess.defaultNumber);
+		// System.out.println(trainerAccess.privateNumber);
 		
 		
 	}

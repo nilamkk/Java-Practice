@@ -5,7 +5,7 @@ abstract class localAbstractClass{
 	public void start() {
 		System.out.println("The thing is getting started...");
 	}
-	abstract public void blowHorn();
+	public abstract void blowHorn();
 }
 
 abstract class localAbstractClass2 extends localAbstractClass{
