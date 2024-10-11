@@ -21,10 +21,15 @@ class Book implements Comparable<Book>{
 	
 	@Override
 	public int compareTo(Book o) {
+		// checking the order (current object and Object o )
+		// Maximum pages should come first
 		if( numberOfPages > o.numberOfPages )
+			// the order is correct, no need to change
 			return -1;
 		if( numberOfPages < o.numberOfPages )
+			// the order is incorrect swap it 
 			return 1;
+		// order is correct, no need to change
 		return 0;
 	}
 }
