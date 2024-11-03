@@ -12,7 +12,7 @@ class Logger {
 	}
 	
 	// Regarding Copy constructor:
-	// In CPP by default the copy constructor is public, so while implementing singleton we need to make sure that copy constructor 
+	// In CPP by default copy constructor is public, so while implementing singleton we need to make sure that copy constructor 
 	// is made explicitly private.
 	// But in java, the default copy constructor is not there, so chilllll!
 	
@@ -22,12 +22,18 @@ class Logger {
 	// But in java, the default operator overloading is not there, so chilllll! 
 	
 	public static Logger getLogger() {
-		if( logger == null ) {
-			synchronized(Logger.class) {
+		// double checked if check
+		if( logger == null ) {				// Double checked locking: This is required because you need to take the lock only when the instance is getting created.
+											// once you have created the instance there is no need to take the lock
+			
+			synchronized(Logger.class) {   // Original lock: This lock is important because multiple threads can enter the if statement one by one.
+				// original if check
 				if( logger == null ) {
 					logger = new Logger();
 				}	
 			}
+			
+			
 		}
 		return logger;
 	}
