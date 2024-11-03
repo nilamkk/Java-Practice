@@ -125,6 +125,15 @@ public class PriorityQueueProgram {
 		bookPQ.add( new Book(4, 256, "The Psycology of Money", "Morgan Housel") );
 		
 		System.out.println("The book with maximum number of pages is: " + bookPQ.peek().Name );
+		
+		
+		///////////////////// Remove Top Element in PQ ////////////////////////////////
+		bookPQ.poll(); 
+		
+		System.out.println("The book with maximum number of pages after removing the first one is: " + bookPQ.peek().Name );		
+		
+		
+		
 
 	}
 
